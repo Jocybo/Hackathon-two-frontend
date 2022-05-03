@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&display=swap');
+
+.boxgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 5px;
+  padding: 10px;
+}
+.box{
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgb(110, 109, 109), 0 10px 10px rgba(78, 78, 78, 0.25);
+  border-radius: 20px !important;
+  font-family: 'Arima Madurai', cursive;
+}
+.fontchange{
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.boximg{
+  margin-top: 10px;
+  object-fit: contain;
+  height: 250px;
+}
+
+.title{
+  font-size: 1.2rem;
+}
+.offerPrice{
+  text-align: left;
+  color:rgb(19, 12, 7);
+  font-size: 1rem;
+}
+.actualPrice{
+  color:rgb(145, 145, 145);
+  text-decoration:line-through;
+  text-align: right;
+}
+.productrating{
+  padding: auto;
+}
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width:320px) and (max-width:380px)
+{
+ .boxgrid{
+   width: 400px;
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+ }
+}
+@media screen and (min-width:425px) and (max-width:700px)
+{
+  .boxgrid{
+   width: 425px;
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+ }
+}
+@media screen and (min-width:768px)
+{
+ 
+.boxgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5px;
+  padding: 10px;
+} 
+}
+
+@media screen and (min-width:1024px)
+{
+ 
+.boxgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 5px;
+  padding: 10px;
+} 
+}
