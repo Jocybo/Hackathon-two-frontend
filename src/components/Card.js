@@ -31,49 +31,50 @@ function Card({ match }) {
         getSearch();
     }, [match.params.id]);
 
-    let pageValues = [];
-    let pagination = (data) => {
-        pageValues = [...data];
-        previousPage();
-    };
+    let allvalues = [];
 
-    let nextPage = () => {
-        if (pageValues.length === 0) {
-            pageValues = [...context.state];
+  let pagination = (data) => {
+    allvalues = [...data];
 
-        }
-        let temp = [];
+    previousPage();
+  };
 
-        let startindex = context.pagenumber;
-        let endindex = context.pagenumber + 10;
-        for (let i = startindex; i < endindex; i++) {
-            temp.push(pageValues[i]);
-        }
-        setCard(temp);
-        context.pagenumber = endindex;
-        if (context.pagenumber >= pageValues.length) {
-            context.pagenumber = pageValues.length - 10;
-        }
-    };
-    let previousPage = () => {
-        if (pageValues.length === 0) {
-            pageValues = [...context.state];
-        }
-        let temp = [];
+  let nextPage = () => {
+    if (allvalues.length === 0) {
+      allvalues = [...context.state];
+    }
+    let temp = [];
 
-        let endindex = context.pagenumber;
-        let startindex = context.pagenumber - 10;
-        for (let i = startindex; i < endindex; i++) {
-            temp.push(pageValues[i]);
-        }
-        setCard(temp);
+    let startindex = context.pagenumber;
+    let endindex = context.pagenumber + 10;
+    for (let i = startindex; i < endindex; i++) {
+      temp.push(allvalues[i]);
+    }
+    setCard(temp);
+    context.pagenumber = endindex;
+    if (context.pagenumber >= allvalues.length) {
+      context.pagenumber = allvalues.length - 10;
+    }
+  };
+  let previousPage = () => {
+    if (allvalues.length === 0) {
+      allvalues = [...context.state];
+    }
+    let temp = [];
 
-        context.pagenumber = startindex;
+    let endindex = context.pagenumber;
+    let startindex = context.pagenumber - 10;
+    for (let i = startindex; i < endindex; i++) {
+      temp.push(allvalues[i]);
+    }
+    setCard(temp);
 
-        if (context.pagenumber <= 0) {
-            context.pagenumber = 10;
-        }
-    };
+    context.pagenumber = startindex;
+
+    if (context.pagenumber <= 0) {
+      context.pagenumber = 10;
+    }
+  };
 
     return (
         <div>
