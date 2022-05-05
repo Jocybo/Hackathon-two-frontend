@@ -6,6 +6,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-top: 5px;
   padding: 10px;
+
 }
 .box{
   margin: 10px;
@@ -13,7 +14,14 @@
   box-shadow: 0 2px 4px rgb(110, 109, 109), 0 10px 10px rgba(78, 78, 78, 0.25);
   border-radius: 20px !important;
   font-family: 'Arima Madurai', cursive;
+  transition: all 0.5s ease-in-out;
 }
+
+.box:hover{
+  background-color: rgb(211, 211, 212);
+}
+
+
 .fontchange{
   font-family: 'Cinzel Decorative', cursive;
 }
@@ -22,15 +30,18 @@
   margin-top: 10px;
   object-fit: contain;
   height: 250px;
+  
 }
 
-.title{
+.prductitle{
   font-size: 1.2rem;
 }
-.offerPrice{
+
+.finalprice{
   text-align: left;
   color:rgb(19, 12, 7);
-  font-size: 1rem;
+  font-weight: 900;
+  font-size: 20px;
 }
 .actualPrice{
   color:rgb(145, 145, 145);
@@ -45,9 +56,20 @@
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width:330px)
+{
+
+ .cardgrid{
+   width: 300px;
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+ }
+}
 @media screen and (min-width:320px) and (max-width:380px)
 {
- .boxgrid{
+ 
+ .cardgrid{
    width: 400px;
    display: flex;
    flex-direction: column;
@@ -56,31 +78,11 @@
 }
 @media screen and (min-width:425px) and (max-width:700px)
 {
-  .boxgrid{
+ 
+ .boxgrid{
    width: 425px;
    display: flex;
    flex-direction: column;
    margin: 0;
  }
-}
-@media screen and (min-width:768px)
-{
- 
-.boxgrid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 5px;
-  padding: 10px;
-} 
-}
-
-@media screen and (min-width:1024px)
-{
- 
-.boxgrid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 5px;
-  padding: 10px;
-} 
 }
